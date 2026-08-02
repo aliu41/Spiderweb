@@ -1,0 +1,22 @@
+@if (!gameOver()) {
+  <p class="attempts-left">
+    The word processor has {{ 6 - guesses().length }} attempts left to find the correct word.
+  </p>
+}
+<p class="guesses">
+    @for (guess of guessResults(); track guess) {
+      <div [innerHTML]="guess"></div>
+    }
+</p>
+@if (gameOver()) {
+  <p class="game-over">
+    @if (gameWon()) {
+      The word processor has found the correct word. It found {{ answer().toUpperCase() }} in {{ guesses().length }} tries.
+    } @else {
+      The word processor has used all 6 attempts and failed to find the correct word. The correct word was {{ answer().toUpperCase() }}.
+    }
+  </p>
+} @else {
+  <input id="guess" type="text" maxlength="5" [(ngModel)]="guess" (keydown.enter)="checkGuess()" autofocus autocomplete="off">
+}
+

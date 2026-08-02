@@ -1,0 +1,32 @@
+#guess {
+    border: none;
+    outline: none;
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.guesses {
+    margin: 0;
+    display: inline;
+
+    :last-child{
+        display: inline;
+    }
+}
+::ng-deep {
+    .correct {
+        background-color: lightgreen;
+    }
+    .present {
+        background-color: lightcoral;
+    }
+}
+
+.attempts-left {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}

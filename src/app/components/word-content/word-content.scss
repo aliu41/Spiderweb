@@ -1,0 +1,34 @@
+.document {
+    width: 40%;
+    margin: 20px auto;
+    padding: 65px 90px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: both;
+    overflow: auto;
+
+    :first-child {
+        margin-bottom: 0;
+    }
+}
+
+.report {
+    border: none;
+    outline: none;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    width: 100%;
+    field-sizing: content;
+    min-height: 1.5rem;
+    resize: none; 
+}
+
+.game-label {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
